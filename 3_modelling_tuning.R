@@ -11,7 +11,6 @@ df <- from_e
 set.seed(420)
 
 df$Transition_new <- as.factor(df$Transition_new)
-weight <- df$HWTFINL
 
 variables<- c("Transition_new","us_region","Education","Birth","Hispanic","Asian",
               "Black","Metropolitan","hh_single","veteran","Male","Recession","Before_Rec","After_Rec",
@@ -45,7 +44,6 @@ model <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -70,7 +68,6 @@ model_down <- ranger(
   mtry            = 12,
   min.node.size   = 1000,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -95,7 +92,6 @@ model_up <- ranger(
   mtry            = 6,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -114,7 +110,6 @@ model_smote <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -151,7 +146,6 @@ model_scale <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -175,7 +169,6 @@ df <- from_u
 set.seed(420)
 
 df$Transition_new <- as.factor(df$Transition_new)
-weight <- df$HWTFINL
 
 variables<- c("Transition_new","us_region","Education","Birth","Hispanic","Asian",
               "Black","Metropolitan","hh_single","veteran","Male","Recession","Before_Rec","After_Rec",
@@ -209,7 +202,6 @@ model <- ranger(
   mtry            = 6,
   min.node.size   = 200,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -234,7 +226,6 @@ model_down <- ranger(
   mtry            = 6,
   min.node.size   = 200,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -256,7 +247,6 @@ model_up <- ranger(
   mtry            = 6,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -275,7 +265,6 @@ model_smote <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -311,7 +300,6 @@ model_scale <- ranger(
   mtry            = 6,
   min.node.size   = 100,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -335,7 +323,6 @@ df <- from_o
 set.seed(420)
 
 df$Transition_new <- as.factor(df$Transition_new)
-weight <- df$HWTFINL
 
 variables<- c("Transition_new","us_region","Education","Birth","Hispanic","Asian",
               "Black","Metropolitan","hh_single","veteran","Male","Recession","Before_Rec","After_Rec",
@@ -369,7 +356,6 @@ model <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -394,7 +380,6 @@ model_down <- ranger(
   mtry            = 6,
   min.node.size   = 200,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -416,7 +401,6 @@ model_up <- ranger(
   mtry            = 6,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -435,7 +419,6 @@ model_smote <- ranger(
   mtry            = 6,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -471,7 +454,6 @@ model_scale <- ranger(
   mtry            = 6,
   min.node.size   = 100,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -496,7 +478,6 @@ df <- from_e_single
 set.seed(420)
 
 df$Transition_new <- as.factor(df$Transition_new)
-weight <- df$HWTFINL
 
 variables<- c("Transition_new","us_region","Education","Birth","Hispanic","Asian",
               "Black","Metropolitan","hh_single","veteran","Male","Recession","Before_Rec","After_Rec",
@@ -530,7 +511,6 @@ model <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -555,7 +535,6 @@ model_down <- ranger(
   mtry            = 12,
   min.node.size   = 1000,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -599,7 +578,6 @@ model_smote <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -636,7 +614,6 @@ model_scale <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -694,7 +671,6 @@ model <- ranger(
   mtry            = 6,
   min.node.size   = 200,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -719,7 +695,6 @@ model_down <- ranger(
   mtry            = 6,
   min.node.size   = 200,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -741,7 +716,6 @@ model_up <- ranger(
   mtry            = 6,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -760,7 +734,6 @@ model_smote <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -796,7 +769,6 @@ model_scale <- ranger(
   mtry            = 6,
   min.node.size   = 100,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -820,7 +792,6 @@ df <- from_o_single
 set.seed(420)
 
 df$Transition_new <- as.factor(df$Transition_new)
-weight <- df$HWTFINL
 
 variables<- c("Transition_new","us_region","Education","Birth","Hispanic","Asian",
               "Black","Metropolitan","hh_single","veteran","Male","Recession","Before_Rec","After_Rec",
@@ -854,7 +825,6 @@ model <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -879,7 +849,6 @@ model_down <- ranger(
   mtry            = 6,
   min.node.size   = 200,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -901,7 +870,6 @@ model_up <- ranger(
   mtry            = 6,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -920,7 +888,6 @@ model_smote <- ranger(
   mtry            = 6,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -956,7 +923,6 @@ model_scale <- ranger(
   mtry            = 6,
   min.node.size   = 100,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -981,7 +947,6 @@ df <- from_e_cp
 set.seed(420)
 
 df$Transition_new <- as.factor(df$Transition_new)
-weight <- df$HWTFINL
 
 variables<- c("Transition_new","us_region","Education","Birth","Hispanic","Asian",
               "Black","Metropolitan","hh_single","veteran","Male","Recession","Before_Rec","After_Rec",
@@ -1015,7 +980,6 @@ model <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1040,7 +1004,6 @@ model_down <- ranger(
   mtry            = 12,
   min.node.size   = 1000,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1084,7 +1047,6 @@ model_smote <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1121,7 +1083,6 @@ model_scale <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1145,7 +1106,6 @@ df <- from_u_cp
 set.seed(420)
 
 df$Transition_new <- as.factor(df$Transition_new)
-weight <- df$HWTFINL
 
 variables<- c("Transition_new","us_region","Education","Birth","Hispanic","Asian",
               "Black","Metropolitan","hh_single","veteran","Male","Recession","Before_Rec","After_Rec",
@@ -1204,7 +1164,6 @@ model_down <- ranger(
   mtry            = 6,
   min.node.size   = 200,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1226,7 +1185,6 @@ model_up <- ranger(
   mtry            = 6,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1245,7 +1203,6 @@ model_smote <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1281,7 +1238,6 @@ model_scale <- ranger(
   mtry            = 6,
   min.node.size   = 100,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1339,7 +1295,6 @@ model <- ranger(
   mtry            = 12,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1364,7 +1319,6 @@ model_down <- ranger(
   mtry            = 6,
   min.node.size   = 200,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1386,7 +1340,6 @@ model_up <- ranger(
   mtry            = 6,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1405,7 +1358,6 @@ model_smote <- ranger(
   mtry            = 6,
   min.node.size   = 50,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
@@ -1441,7 +1393,6 @@ model_scale <- ranger(
   mtry            = 6,
   min.node.size   = 100,
   sample.fraction = .7,
-  #case.weights    = weight,
   importance      = 'impurity',
   seed            = 420
 )
